@@ -33,5 +33,4 @@ def prepare_dataset(df: pd.DataFrame):
 
     X = df[feature_cols]
     y = df["Target"]
-
     return X, y, df, feature_cols

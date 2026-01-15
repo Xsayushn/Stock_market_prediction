@@ -3,7 +3,6 @@ import pandas as pd
 def generate_signals(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
 
-    # ✅ Ensure these are Series (not DataFrames)
     close = df["Close"].squeeze()
     ma20 = df["MA_20"].squeeze()
     rsi = df["RSI"].squeeze()

@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from src.indicators import compute_rsi, compute_macd
 
 def add_features(df: pd.DataFrame) -> pd.DataFrame:
@@ -23,7 +22,7 @@ def add_features(df: pd.DataFrame) -> pd.DataFrame:
 
 def prepare_dataset(df: pd.DataFrame):
     df = df.copy()
-    df["Target"] = df["Close"].shift(-1)  # next day close
+    df["Target"] = df["Close"].shift(-1)
     df = df.dropna()
 
     feature_cols = [

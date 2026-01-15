@@ -21,14 +21,11 @@ def candlestick_chart(df):
         row=1, col=1
     )
 
-    # Moving averages
     fig.add_trace(go.Scatter(x=df["Date"], y=df["MA_20"], name="MA 20"), row=1, col=1)
     fig.add_trace(go.Scatter(x=df["Date"], y=df["MA_50"], name="MA 50"), row=1, col=1)
 
-    # RSI
     fig.add_trace(go.Scatter(x=df["Date"], y=df["RSI"], name="RSI"), row=2, col=1)
 
-    # MACD
     fig.add_trace(go.Scatter(x=df["Date"], y=df["MACD"], name="MACD"), row=3, col=1)
     fig.add_trace(go.Scatter(x=df["Date"], y=df["MACD_Signal"], name="Signal"), row=3, col=1)
 

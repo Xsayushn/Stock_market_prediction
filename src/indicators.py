@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 def compute_rsi(df: pd.DataFrame, period: int = 14) -> pd.Series:
     close = df["Close"]

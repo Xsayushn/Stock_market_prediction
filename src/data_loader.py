@@ -1,7 +1,7 @@
 import yfinance as yf
 import pandas as pd
 
-def load_stock_data(symbol: str, start="2016-01-01", end="2026-01-01") -> pd.DataFrame:
+def load_stock_data(symbol: str, start="2018-01-01", end=None) -> pd.DataFrame:
     df = yf.download(symbol, start=start, end=end, progress=False)
 
     if df.empty:
